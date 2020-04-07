@@ -1,0 +1,135 @@
+.body {
+    background-color: white;
+}
+
+.frm-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.frm-wrapper {
+    height: 100%;
+    width: 25%;
+    min-width: 280px;
+}
+
+.frm {
+    border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+.inp {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.btn {
+    background-color: #0d6112;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.custom-th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/*text-decoration-line: none;*/
+
+.todo-btns {
+    width: 38px;
+}
+
+.todo-h {
+    width: auto;
+}
+
+.todo-h:hover {
+    background-color: #088600;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gender {
+    align-self: center;
+    padding-top: 5px;
+}
+
+label {
+    padding: 10px 2px 2px;
+}
+
+.register-button {
+    margin-bottom: 10px;
+}
+
+.auto-width {
+    width: auto;
+}
+
+.add-btn {
+    width: 120px;
+    align-self: flex-start;
+    /*margin-left: 85px;*/
+}
+
+.custom-panel {
+    background-color: #0d6112;
+    border: 2px solid #0d6112;
+    border-radius: 4px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
