@@ -1,7 +1,5 @@
 package com.deloitte.mvc.dao;
 
-import com.deloitte.mvc.model.Gender;
-import com.deloitte.mvc.model.Status;
 import com.deloitte.mvc.model.User;
 
 import java.util.List;

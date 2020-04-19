@@ -60,10 +60,6 @@ public class TodoDaoImpl implements TodoDao {
 
     @Override
     public Todo getTodoById(int todoId) {
-        return sessionFactory.getCurrentSession()
-        .createQuery("SELECT t FROM Todo t " +
-                "WHERE id=:todoId", Todo.class)
-                .setParameter("todoId", todoId)
-                .getSingleResult();
+        return sessionFactory.getCurrentSession().find(Todo.class, todoId);
     }
 }

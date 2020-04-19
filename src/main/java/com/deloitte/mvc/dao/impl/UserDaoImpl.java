@@ -1,14 +1,11 @@
 package com.deloitte.mvc.dao.impl;
 
 import com.deloitte.mvc.dao.UserDao;
-import com.deloitte.mvc.model.Gender;
-import com.deloitte.mvc.model.Status;
 import com.deloitte.mvc.model.User;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
