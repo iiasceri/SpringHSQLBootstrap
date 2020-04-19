@@ -82,13 +82,19 @@
                     </thead>
                     <tbody>
                     <c:forEach items="${todoList}" var="todo">
+
                         <tr>
                             <td>
                                 <input type="checkbox"
                                        onclick="location.href='<c:url value="/todo/updateTodo/${todo.id}"/>'"
                                        <c:if test="${todo.todoStatus == 'DONE'}">checked="checked"</c:if>/>
                             </td>
-                            <td>${todo.title}</td>
+
+
+                            <td> <c:if test="${todo.todoStatus == 'DONE'}"><del></c:if>
+                                    ${todo.title}
+                                <c:if test="${todo.todoStatus == 'DONE'}"></del></c:if>
+                            </td>
                             <td>${todo.description}</td>
                             <td>
                                 <fmt:formatDate value="${todo.lastChange}" type="date" pattern="dd MMM HH:mm"/>
