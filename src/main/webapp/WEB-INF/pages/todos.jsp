@@ -7,7 +7,6 @@
 <head>
     <title>ToDo</title>
     <link href="<c:url value="/resources/style/style.css" />" rel="stylesheet">
-    <script src="<c:url value="/resources/js/some.js" />"></script>
     <meta charset="UTF-8">
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
