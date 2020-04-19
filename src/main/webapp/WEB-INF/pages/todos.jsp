@@ -66,7 +66,7 @@
     <div class="container">
         <div class="panel panel-primary custom-panel">
             <div class="panel-heading" style="background-color: #0d6112; border: 2px solid #0d6112;">
-                <h3>List of TODO's</h3>
+                <h3>TODO</h3>
             </div>
             <div class="panel-body" style="border: 2px solid grey;">
                 <table class="table table-striped" style="margin-bottom: 0px;">
@@ -82,36 +82,90 @@
                     </thead>
                     <tbody>
                     <c:forEach items="${todoList}" var="todo">
+                        <c:if test="${todo.todoStatus == 'TODO'}">
+                            <tr>
+                                <td>
+                                    <input type="checkbox"
+                                           onclick="location.href='<c:url value="/todo/updateTodo/${todo.id}"/>'"
+                                           <c:if test="${todo.todoStatus == 'DONE'}">checked="checked"</c:if>/>
+                                </td>
 
-                        <tr>
-                            <td>
-                                <input type="checkbox"
-                                       onclick="location.href='<c:url value="/todo/updateTodo/${todo.id}"/>'"
-                                       <c:if test="${todo.todoStatus == 'DONE'}">checked="checked"</c:if>/>
-                            </td>
 
-
-                            <td> <c:if test="${todo.todoStatus == 'DONE'}"><del></c:if>
-                                    ${todo.title}
-                                <c:if test="${todo.todoStatus == 'DONE'}"></del></c:if>
-                            </td>
-                            <td>${todo.description}</td>
-                            <td>
-                                <fmt:formatDate value="${todo.lastChange}" type="date" pattern="dd MMM HH:mm"/>
-                            </td>
-<%--                            <td>--%>
-<%--                                ${todo.dueDate}--%>
-<%--                            </td>--%>
-                            <td>
-                                <button type="button" class="btn todo-btns todo-h"
-                                        onclick="location.href='<c:url value="/todo/delete-by-id/${todo.id}"/>'">X
-                                </button>
-                            </td>
-                        </tr>
+                                <td> <c:if test="${todo.todoStatus == 'DONE'}"><del></c:if>
+                                        ${todo.title}
+                                    <c:if test="${todo.todoStatus == 'DONE'}"></del></c:if>
+                                </td>
+                                <td>${todo.description}</td>
+                                <td>
+                                    <fmt:formatDate value="${todo.lastChange}" type="date" pattern="dd MMM HH:mm"/>
+                                </td>
+                                    <%--                            <td>--%>
+                                    <%--                                ${todo.dueDate}--%>
+                                    <%--                            </td>--%>
+                                <td>
+                                    <button type="button" class="btn todo-btns todo-h"
+                                            onclick="location.href='<c:url value="/todo/delete-by-id/${todo.id}"/>'">X
+                                    </button>
+                                </td>
+                            </tr>
+                        </c:if>
                     </c:forEach>
                     </tbody>
                 </table>
             </div>
+
+        </div>
+
+        <div class="panel panel-primary custom-panel">
+            <div class="panel-heading" style="background-color: #0d6112; border: 2px solid #0d6112;">
+                <h3>DONE</h3>
+            </div>
+            <div class="panel-body" style="border: 2px solid grey;">
+                <table class="table table-striped" style="margin-bottom: 0px;">
+                    <thead>
+                    <tr>
+                        <th class="custom-th">Status</th>
+                        <th class="custom-th">Title</th>
+                        <th class="custom-th">Description</th>
+                        <th class="custom-th">Last Change</th>
+                        <%--                        <th class="custom-th">Due Date</th>--%>
+                        <th class="custom-th">Remove</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach items="${todoList}" var="todo">
+                        <c:if test="${todo.todoStatus == 'DONE'}">
+                            <tr>
+                                <td>
+                                    <input type="checkbox"
+                                           onclick="location.href='<c:url value="/todo/updateTodo/${todo.id}"/>'"
+                                           <c:if test="${todo.todoStatus == 'DONE'}">checked="checked"</c:if>/>
+                                </td>
+
+
+                                <td> <c:if test="${todo.todoStatus == 'DONE'}"><del></c:if>
+                                        ${todo.title}
+                                    <c:if test="${todo.todoStatus == 'DONE'}"></del></c:if>
+                                </td>
+                                <td>${todo.description}</td>
+                                <td>
+                                    <fmt:formatDate value="${todo.lastChange}" type="date" pattern="dd MMM HH:mm"/>
+                                </td>
+                                    <%--                            <td>--%>
+                                    <%--                                ${todo.dueDate}--%>
+                                    <%--                            </td>--%>
+                                <td>
+                                    <button type="button" class="btn todo-btns todo-h"
+                                            onclick="location.href='<c:url value="/todo/delete-by-id/${todo.id}"/>'">X
+                                    </button>
+                                </td>
+                            </tr>
+                        </c:if>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 </div>
