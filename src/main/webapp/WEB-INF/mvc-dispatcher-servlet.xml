@@ -15,7 +15,7 @@
     </bean>
 
     <mvc:resources mapping="/resources/**"
-                   location="static/"
+                   location="resources/"
                    cache-period="1"/>
 
     <context:property-placeholder location="classpath:database.properties"/>

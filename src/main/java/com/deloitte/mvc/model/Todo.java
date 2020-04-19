@@ -14,7 +14,6 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Setter
 @EqualsAndHashCode
 @ToString
-
 @Table(name = "todos")
 @Entity
 public class Todo {
