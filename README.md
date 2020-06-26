@@ -1,2 +1,2 @@
 # Spring Web Application (DeloitteTodo)
-HSQL(in memory), insert.sql (create from scratch a db with inserts), bootstrap bits
+HSQL(in memory DB), insert.sql (create from scratch a DB with inserts), bootstrap bits
